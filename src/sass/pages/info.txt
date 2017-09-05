@@ -1,0 +1,1 @@
+pages, for styles that are specific to a page or large section or the website

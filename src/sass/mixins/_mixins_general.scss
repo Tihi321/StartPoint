@@ -1,0 +1,16 @@
+// for a general mixins
+
+@function em($pxsize, $emdefsize : 16){
+	@return ($pxsize/$emdefsize) * 1em;
+}
+
+@function rem($pxsize, $emdefsize : 16){
+	@return ($pxsize/$emdefsize) * 1rem;
+}
+
+@mixin vertical-center {
+	position: absolute;
+	top:50%;
+	left:50%;
+	transform: translate(-50%, -50%);
+}

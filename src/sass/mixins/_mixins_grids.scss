@@ -1,0 +1,20 @@
+// for mixins that will help us to generate various grid classes
+
+//
+//-- Grid Mixins
+//
+
+@mixin generate_grid($type) {
+	%grid-#{$type}--base {
+		float: left;
+		padding-left: $grid-gutter;
+		padding-right: $grid-gutter;
+	}
+
+	@for $i from 1 through 12 {
+		.grid-#{$type}--#{$i} {
+			@extend %grid-#{$type}--base;
+			width: (100% / 12) * $i;
+		}
+	}
+}
